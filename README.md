@@ -332,7 +332,7 @@ but most probably it is enough to override **targetPath** property.
 
 
 ## Changelog
-* **1.5.4** (12.05.2016)
+* **1.5.4a** (12.05.2016)
   * add a new goal for running npm scripts (npm-run)
 * **1.5.1** (24.06.2015)
   * fix unarchiving tar on osx (#70)
