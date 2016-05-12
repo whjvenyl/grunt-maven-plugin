@@ -15,7 +15,7 @@
     <name>grunt-maven-plugin</name>
     <description>Integrates GruntJS with Maven build.</description>
 
-    <url>https://github.com/allegro/grunt-maven-plugin</url>
+    <url>https://github.com/whjvenyl/grunt-maven-plugin</url>
 
     <developers>
         <developer>
@@ -32,9 +32,9 @@
     </licenses>
 
     <scm>
-        <connection>scm:git:git@github.com:allegro/grunt-maven-plugin.git</connection>
-        <developerConnection>scm:git:git@github.com:allegro/grunt-maven-plugin.git</developerConnection>
-        <url>https://github.com/allegro/grunt-maven-plugin</url>
+        <connection>scm:git:git@github.com:whjvenyl/grunt-maven-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:whjvenyl/grunt-maven-plugin.git</developerConnection>
+        <url>https://github.com/whjvenyl/grunt-maven-plugin</url>
     </scm>
 
     <properties>
