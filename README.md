@@ -214,6 +214,7 @@ remember to exclude those files from integrated workflow config, as else Grunt w
 * **create-resources** : copies all files and *filteredResources* from *sourceDirectory/jsSourceDirectory* to *gruntBuildDirectory*
 * **npm** : executes `npm install` in target directory
 * **npm-offline** : reuses packed node modules instead of fetching them from npm
+* **npm-run** : executes `npm run build` in target directory
 * **bower** : executes `bower install` in target directory
 * **grunt** : executes Grunt in target directory
 * **clean** : deletes *gruntBuildDirectory*
