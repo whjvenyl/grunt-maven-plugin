@@ -37,7 +37,7 @@ public class ExecNpmOfflineMojo extends ExecNpmMojo {
     private static final String NPM_REBUILD_COMMAND = "rebuild";
 
     /**
-     * List of additional options passed to npm when callign rebuild.
+     * List of additional options passed to npm when calling rebuild.
      */
     @Parameter(property = "npmRebuildOptions")
     private String[] npmRebuildOptions;

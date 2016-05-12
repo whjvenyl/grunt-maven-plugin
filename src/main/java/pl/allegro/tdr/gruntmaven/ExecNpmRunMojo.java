@@ -17,7 +17,8 @@ import java.util.Map;
 @Mojo(name = "npm-run", defaultPhase = LifecyclePhase.COMPILE, threadSafe = true)
 public class ExecNpmRunMojo extends AbstractExecutableMojo {
 
-  protected static final String NPM_RUN_COMMAND = "run build";
+  protected static final String NPM_RUN_COMMAND1 = "run";
+  protected static final String NPM_RUN_COMMAND2 = "build";
 
   /**
    * Name of npm executable in PATH, defaults to npm.
@@ -26,13 +27,13 @@ public class ExecNpmRunMojo extends AbstractExecutableMojo {
   protected String npmExecutable;
 
   /**
-   * List of additional options passed to npm when calling install.
+   * List of additional options passed to npm when calling run build.
    */
   @Parameter(property = "npmOptions")
   private String[] npmOptions;
 
   /**
-   * Map of environment variables passed to npm install.
+   * Map of environment variables passed to npm run build.
    */
   @Parameter
   protected Map<String, String> npmEnvironmentVar;
@@ -43,7 +44,8 @@ public class ExecNpmRunMojo extends AbstractExecutableMojo {
 
     executable.addEnvironmentVars(npmEnvironmentVar);
 
-    executable.addArgument(NPM_RUN_COMMAND);
+    executable.addArgument(NPM_RUN_COMMAND1);
+    executable.addArgument(NPM_RUN_COMMAND2);
     appendNoColorsArgument(executable);
     appendNpmOptions(executable);
 
