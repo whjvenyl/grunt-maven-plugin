@@ -70,6 +70,7 @@ public class ExecNpmOfflineMojo extends ExecNpmMojo {
         Executable executable = new Executable(npmExecutable);
         executable.addArgument(NPM_INSTALL_COMMAND);
         executable.addArgument("--ignore-scripts");
+        executable.addArgument("--no-optional");
         appendNoColorsArgument(executable);
         appendNpmOptions(executable);
 
