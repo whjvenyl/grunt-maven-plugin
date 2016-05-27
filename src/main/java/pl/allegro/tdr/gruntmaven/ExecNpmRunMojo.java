@@ -18,7 +18,7 @@ import java.util.Map;
 public class ExecNpmRunMojo extends AbstractExecutableMojo {
 
   protected static final String NPM_RUN_COMMAND1 = "run";
-  protected static final String NPM_RUN_COMMAND2 = "build";
+
 
   /**
    * Name of npm executable in PATH, defaults to npm.
@@ -33,6 +33,12 @@ public class ExecNpmRunMojo extends AbstractExecutableMojo {
   private String[] npmOptions;
 
   /**
+   * Name of the script.
+   */
+  @Parameter(property = "scriptName")
+  private String scriptName;
+
+  /**
    * Map of environment variables passed to npm run build.
    */
   @Parameter
@@ -45,7 +51,7 @@ public class ExecNpmRunMojo extends AbstractExecutableMojo {
     executable.addEnvironmentVars(npmEnvironmentVar);
 
     executable.addArgument(NPM_RUN_COMMAND1);
-    executable.addArgument(NPM_RUN_COMMAND2);
+    executable.addArgument(scriptName);
     appendNoColorsArgument(executable);
     appendNpmOptions(executable);
 
